@@ -10,6 +10,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 import java.time.LocalDate;
 import java.util.LinkedHashSet;
@@ -19,7 +21,10 @@ import java.util.Set;
 @Data
 @Table(name = "appointment")
 public class Appointment {
+    private static final long serialVersionUID = 1L;
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_Appointment", nullable = false)
     private Integer id;
 
