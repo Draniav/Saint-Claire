@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.GeneratedValue;
@@ -36,11 +37,10 @@ public class Appointment {
     @JoinColumn(name = "Patient_id_Patient", nullable = false)
     private Patient patientIdPatient;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "Medical_Specialty_id_Medical_Specialty", nullable = false)
     private MedicalSpecialty medicalSpecialtyIdMedicalSpecialty;
 
 
 
-    }
-
+}
