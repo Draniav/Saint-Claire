@@ -21,5 +21,36 @@ public class Patient {
     @Column(name = "Identification_number_Patient", nullable = false)
     private Long identificationNumberPatient;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNamePatient() {
+        return namePatient;
+    }
+
+    public void setNamePatient(String namePatient) {
+        this.namePatient = namePatient;
+    }
+
+    public Integer getAgePatient() {
+        return agePatient;
+    }
+
+    public void setAgePatient(Integer agePatient) {
+        this.agePatient = agePatient;
+    }
+
+    public Long getIdentificationNumberPatient() {
+        return identificationNumberPatient;
+    }
+
+    public void setIdentificationNumberPatient(Long identificationNumberPatient) {
+        this.identificationNumberPatient = identificationNumberPatient;
+    }
 
 }
