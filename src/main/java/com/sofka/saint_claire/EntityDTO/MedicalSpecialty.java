@@ -1,11 +1,18 @@
 package com.sofka.saint_claire.EntityDTO;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
 @Table(name = "medical_specialty")
 public class MedicalSpecialty {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_Medical_Specialty", nullable = false)
     private Integer id;
 

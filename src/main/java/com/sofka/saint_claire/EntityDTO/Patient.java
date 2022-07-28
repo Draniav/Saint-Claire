@@ -24,7 +24,6 @@ import java.util.Set;
 @Table(name = "patient")
 public class Patient implements Serializable {
     private static final long serialVersionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_Patient", nullable = false)
