@@ -1,3 +1,4 @@
+
 package com.sofka.saint_claire.EntityDTO;
 
 import lombok.Data;
@@ -9,8 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
-import javax.persistence.FetchType;
-import javax.persistence.CascadeType;
+//import javax.persistence.FetchType;
+//import javax.persistence.CascadeType;
 import javax.persistence.Id;
 
 
@@ -38,13 +39,13 @@ public class Patient implements Serializable {
     @Column(name = "Identification_number_Patient", nullable = false)
     private Long identificationNumberPatient;
 
-
-    @OneToMany(fetch = FetchType.EAGER,
-            targetEntity =  Appointment.class,
-            cascade = CascadeType.REMOVE,mappedBy = "patientIdPatient")
-
-
+    @OneToMany(mappedBy = "patientIdPatient")
     private Set<Appointment> appointments = new LinkedHashSet<>();
+
+    // @OneToMany(fetch = FetchType.EAGER,
+    //     targetEntity =  Appointment.class,
+    //     cascade = CascadeType.REMOVE,mappedBy = "patientIdPatient")
+
 
     public Patient() {
     }
@@ -62,4 +63,6 @@ public class Patient implements Serializable {
         this.identificationNumberPatient = identificationNumberPatient;
         this.appointments = appointments;
     }
+
+
 }
