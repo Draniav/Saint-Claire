@@ -15,12 +15,5 @@ public class SaintClaireApplication {
     public static void main(String[] args) {
         SpringApplication.run(SaintClaireApplication.class, args);}
 
-    @GetMapping(path = "api/v1/hello")
-    public List<Patient> hello() {
-        return List.of(new Patient(1,
-                "alex",
-                34,
-                1926L,
-                null));
-    }
+
 }

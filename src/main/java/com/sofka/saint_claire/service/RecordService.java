@@ -23,6 +23,7 @@ public class RecordService implements Irecord {
     @Override
     @Transactional(readOnly = true)
     public List<Patient> getList() {
+    System.out.println("Hola desde getList");
         return null;
     }
     @Transactional(readOnly = true)

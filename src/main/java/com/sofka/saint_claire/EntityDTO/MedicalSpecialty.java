@@ -36,7 +36,12 @@ public class MedicalSpecialty implements Serializable {
     @JoinColumn(name = "Appointment_id_Appointment", nullable = false)
     private Appointment appointmentIdAppointment;
 
+    public MedicalSpecialty() {
+        }
 
-
-
+    public MedicalSpecialty(Integer id, String nameMedicalSpecialty, String physicianInChargeMedicalSpecialty) {
+        this.id = id;
+        this.nameMedicalSpecialty = nameMedicalSpecialty;
+        this.physicianInChargeMedicalSpecialty = physicianInChargeMedicalSpecialty;
+    }
 }
