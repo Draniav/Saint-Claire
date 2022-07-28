@@ -2,7 +2,18 @@ package com.sofka.saint_claire.EntityDTO;
 
 import lombok.Data;
 
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+import javax.persistence.OneToMany;
+import javax.persistence.FetchType;
+import javax.persistence.CascadeType;
+import javax.persistence.Id;
+
+
 import java.io.Serializable;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -27,17 +38,28 @@ public class Patient implements Serializable {
     @Column(name = "Identification_number_Patient", nullable = false)
     private Long identificationNumberPatient;
 
-    /**
-     * Punto de enlace entre la entidad del Contacto y Teléfono (un contacto puede tener muchos números de teléfono)
-     */
-
 
     @OneToMany(fetch = FetchType.EAGER,
             targetEntity =  Appointment.class,
             cascade = CascadeType.REMOVE,mappedBy = "patientIdPatient")
 
-    
+
     private Set<Appointment> appointments = new LinkedHashSet<>();
 
+    public Patient() {
+    }
 
+    public Patient(String namePatient, Integer agePatient, Long identificationNumberPatient) {
+        this.namePatient = namePatient;
+        this.agePatient = agePatient;
+        this.identificationNumberPatient = identificationNumberPatient;
+    }
+
+    public Patient(Integer id, String namePatient, Integer agePatient, Long identificationNumberPatient, Set<Appointment> appointments) {
+        this.id = id;
+        this.namePatient = namePatient;
+        this.agePatient = agePatient;
+        this.identificationNumberPatient = identificationNumberPatient;
+        this.appointments = appointments;
+    }
 }
