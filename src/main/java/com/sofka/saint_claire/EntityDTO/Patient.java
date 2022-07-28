@@ -50,12 +50,14 @@ public class Patient implements Serializable {
     public Patient() {
     }
 
-    public Patient(String namePatient, Integer agePatient, Long identificationNumberPatient) {
-        this.namePatient = namePatient;
-        this.agePatient = agePatient;
-        this.identificationNumberPatient = identificationNumberPatient;
-    }
-
+    /**
+     * constructor for patient
+     * @param id
+     * @param namePatient
+     * @param agePatient
+     * @param identificationNumberPatient
+     * @param appointments
+     */
     public Patient(Integer id, String namePatient, Integer agePatient, Long identificationNumberPatient, Set<Appointment> appointments) {
         this.id = id;
         this.namePatient = namePatient;
@@ -63,6 +65,4 @@ public class Patient implements Serializable {
         this.identificationNumberPatient = identificationNumberPatient;
         this.appointments = appointments;
     }
-
-
 }

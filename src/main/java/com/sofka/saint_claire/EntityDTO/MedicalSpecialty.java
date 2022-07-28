@@ -19,4 +19,20 @@ public class MedicalSpecialty {
     private Appointment appointments;
 
 
+    public MedicalSpecialty() {
+
+    }
+
+    public MedicalSpecialty(Integer id, String nameMedicalSpecialty, String physicianInChargeMedicalSpecialty) {
+        this.id = id;
+        this.nameMedicalSpecialty = nameMedicalSpecialty;
+        this.physicianInChargeMedicalSpecialty = physicianInChargeMedicalSpecialty;
+    }
+
+    public MedicalSpecialty(Integer id, String nameMedicalSpecialty, String physicianInChargeMedicalSpecialty, Appointment appointments) {
+        this.id = id;
+        this.nameMedicalSpecialty = nameMedicalSpecialty;
+        this.physicianInChargeMedicalSpecialty = physicianInChargeMedicalSpecialty;
+        this.appointments = appointments;
+    }
 }
