@@ -1,11 +1,14 @@
 package com.sofka.saint_claire.EntityDTO;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
+@Data
 @Table(name = "patient")
 public class Patient {
     @Id

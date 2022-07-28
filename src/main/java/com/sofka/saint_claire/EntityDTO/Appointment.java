@@ -1,11 +1,22 @@
 package com.sofka.saint_claire.EntityDTO;
 
-import javax.persistence.*;
+import lombok.Data;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+
 import java.time.LocalDate;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Entity
+@Data
 @Table(name = "appointment")
 public class Appointment {
     @Id
