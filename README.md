@@ -30,7 +30,8 @@ Spring Boot
 Jpa Buddy (free trial)  
 MySQL Workbench  (MER)  
 Datagrip (data base)  
-Paint Tool SAI (edit images)
+Paint Tool SAI (edit images)  
+Postman (test the routes)
 
 
 

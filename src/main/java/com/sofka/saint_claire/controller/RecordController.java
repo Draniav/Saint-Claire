@@ -32,14 +32,9 @@ public class RecordController {
 
     @GetMapping(path = "api/v1/patient")
     public List<Patient> patient() {
+        List<Patient> lista = recordService.getList();
 
-
-
-        return List.of(new Patient(1,
-                "alex",
-                34,
-                1926L, null
-        ));
+        return lista;
     }
     @GetMapping(path = "api/v1/speciality")
     public List<String> speciality() {
