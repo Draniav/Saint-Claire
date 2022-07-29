@@ -1,3 +1,4 @@
+DROP DATABASE Saint_Claire_DB;-- -----------------------------------------------------
 -- -----------------------------------------------------
 -- Schema Saint_Claire_DB
 -- -----------------------------------------------------
@@ -42,7 +43,7 @@ CREATE TABLE IF NOT EXISTS Appointment (
     FOREIGN KEY (Patient_id_Patient)
     REFERENCES Patient (id_Patient)
     ON DELETE  RESTRICT
-    ON UPDATE CASCADE,
+    ON UPDATE  CASCADE,
   CONSTRAINT fk_Appointment_Medical_Specialty1
     FOREIGN KEY (Medical_Specialty_id_Medical_Specialty)
     REFERENCES Medical_Specialty (id_Medical_Specialty)

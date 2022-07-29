@@ -25,18 +25,19 @@ general medicine, pharmacy, etc.
 
 ## IDE
 
-The workshop was developed using IntelliJ Express. 
-Spring Boot
-Jpa Buddy (free trial)
-MySQL Workbench
-Datagrip
+The workshop was developed using IntelliJ Express. for back and front 
+Spring Boot  
+Jpa Buddy (free trial)  
+MySQL Workbench  (MER)  
+Datagrip (data base)  
+Paint Tool SAI (edit images)
 
 
 
 ## Status
 >in develop.
 
->last update 7/27/2022.    
+>last update 7/28/2022.    
 
 ## Screen Shoots
 
@@ -44,3 +45,4 @@ N/A
 
 >basic configuration 
 >connections 
+
