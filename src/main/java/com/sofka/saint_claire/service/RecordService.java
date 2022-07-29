@@ -22,16 +22,8 @@ public class RecordService implements Irecord {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Patient> getList() {
-        List<Patient> listis =  patientRepository.findAll();
-        List<Patient> listi = List.of(new Patient(1,
-                        "alex",
-                        34,
-                        1926L, null));
-
-                System.out.println("Hola desde getList");
-
-        return listis;
+    public List<Patient> getPatientList() {
+        return patientRepository.findAll();
     }
     @Transactional(readOnly = true)
     @Override

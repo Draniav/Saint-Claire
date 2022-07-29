@@ -7,25 +7,15 @@ import java.util.List;
 
 public interface Irecord {
 
-
-    List<Patient> getList();
-
-
+    /**
+     * CRUD Patient
+     * */
+    List<Patient> getPatientList();
     List<Patient> searchPatient(String dataToSearch);
-
-
     Patient createPatient(Patient patient);
-
-
     Patient updatePatient(Integer id, Patient patient);
-
-
     Patient updatePatientName(Integer id, Patient patient);
-
-
     Patient updatePatientAge(Integer id, Patient patient);
-
-
     Patient deletePatient(Integer id);
 
 
