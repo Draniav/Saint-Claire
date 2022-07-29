@@ -2,7 +2,14 @@ package com.sofka.saint_claire.EntityDTO;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+import javax.persistence.OneToOne;
+import javax.persistence.FetchType;
 
 @Entity
 @Data
