@@ -1,4 +1,4 @@
-package com.sofka.saint_claire.EntityDTO;
+package com.sofka.saint_claire.Entity;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.sofka.saint_claire.utilities.LengthValidator;

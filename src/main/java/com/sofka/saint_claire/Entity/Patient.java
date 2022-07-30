@@ -1,10 +1,9 @@
-package com.sofka.saint_claire.EntityDTO;
+package com.sofka.saint_claire.Entity;
 
 import lombok.Data;
 import org.jetbrains.annotations.Nullable;
 
 import javax.persistence.*;
-import javax.swing.*;
 import java.util.LinkedHashSet;
 import java.util.Set;
 

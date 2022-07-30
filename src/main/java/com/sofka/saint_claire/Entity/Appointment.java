@@ -1,4 +1,4 @@
-package com.sofka.saint_claire.EntityDTO;
+package com.sofka.saint_claire.Entity;
 
 
 import lombok.Data;

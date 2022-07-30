@@ -1,7 +1,7 @@
 package com.sofka.saint_claire.controller;
 
 
-import com.sofka.saint_claire.EntityDTO.Patient;
+import com.sofka.saint_claire.Entity.Patient;
 import com.sofka.saint_claire.service.RecordService;
 import com.sofka.saint_claire.utilities.Response;
 import lombok.extern.slf4j.Slf4j;

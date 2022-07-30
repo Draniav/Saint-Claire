@@ -1,6 +1,6 @@
 package com.sofka.saint_claire.service.interfaces;
 
-import com.sofka.saint_claire.EntityDTO.MedicalSpecialty;
+import com.sofka.saint_claire.Entity.MedicalSpecialty;
 
 import java.util.List;
 

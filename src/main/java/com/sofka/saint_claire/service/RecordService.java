@@ -1,6 +1,6 @@
 package com.sofka.saint_claire.service;
 
-import com.sofka.saint_claire.EntityDTO.Patient;
+import com.sofka.saint_claire.Entity.Patient;
 import com.sofka.saint_claire.repositoryDAO.AppointmentRepository;
 import com.sofka.saint_claire.repositoryDAO.MedicalSpecialtyRepository;
 import com.sofka.saint_claire.repositoryDAO.PatientRepository;

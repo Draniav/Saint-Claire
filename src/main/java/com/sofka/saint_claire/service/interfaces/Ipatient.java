@@ -1,6 +1,6 @@
 package com.sofka.saint_claire.service.interfaces;
 
-import com.sofka.saint_claire.EntityDTO.Patient;
+import com.sofka.saint_claire.Entity.Patient;
 
 import java.util.List;
 

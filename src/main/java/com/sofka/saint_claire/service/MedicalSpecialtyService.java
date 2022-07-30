@@ -1,6 +1,6 @@
 package com.sofka.saint_claire.service;
 
-import com.sofka.saint_claire.EntityDTO.MedicalSpecialty;
+import com.sofka.saint_claire.Entity.MedicalSpecialty;
 import com.sofka.saint_claire.repositoryDAO.MedicalSpecialtyRepository;
 import com.sofka.saint_claire.service.interfaces.ImedicalSpecialty;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,14 +1,13 @@
 package com.sofka.saint_claire.service;
 
-import com.sofka.saint_claire.EntityDTO.Appointment;
-import com.sofka.saint_claire.EntityDTO.Patient;
+import com.sofka.saint_claire.Entity.Appointment;
+import com.sofka.saint_claire.Entity.Patient;
 import com.sofka.saint_claire.repositoryDAO.AppointmentRepository;
 import com.sofka.saint_claire.repositoryDAO.PatientRepository;
 import com.sofka.saint_claire.service.interfaces.Ipatient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.Instant;
 import java.util.List;
 
 public class PatientService implements Ipatient {
