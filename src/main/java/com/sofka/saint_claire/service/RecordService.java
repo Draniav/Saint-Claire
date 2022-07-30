@@ -29,9 +29,10 @@ public class RecordService implements Irecord {
     public List<Patient> getPatientList() {
         return patientRepository.findAll();
     }
+
     @Transactional(readOnly = true)
     @Override
-    public List<Patient> searchPatientByID(Integer idPatienttosearch) {
+    public List<Patient> searchPatientByID(Integer idPatientSearch) {
         return null;
     }
 
