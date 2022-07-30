@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -22,32 +23,27 @@ import java.util.List;
 @Controller
 @RestController
 @CrossOrigin(value = "*")
-public class RecordController {
+public class SpecialityController {
     @Autowired
     private RecordService recordService;
     private Response response = new Response();
     private HttpStatus httpStatus = HttpStatus.OK;
 
-
-    @RequestMapping(path = "/home")
-    public String home() {
-        return "home";
-    }
-
-
-    @GetMapping(path = "api/v1/patient_show_all")
-    public List<Patient> patient() {
-        return recordService.getPatientList();
-    }
     @GetMapping(path = "api/v1/speciality")
     public List<String> speciality() {
 
         return List.of("name test",  "mphysician-test");
     }
 
-    @GetMapping(path = "/api/v1/boards")
-    public ResponseEntity<Response> index() {
-        response.data = recordService.getPatientList();
+    @GetMapping(path = "/api/v1/speciality_show_all")
+    public ResponseEntity<Response> showSpecialityList() {
+       // response.data = recordService.getPatientList();
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+    @GetMapping(path = "/api/v1/speciality/{id}")
+    public ResponseEntity<Response> getSpecialityById(@PathVariable(value = "id") Integer id) {
+       // response.data = recordService.searchPatientByID(id);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
 }

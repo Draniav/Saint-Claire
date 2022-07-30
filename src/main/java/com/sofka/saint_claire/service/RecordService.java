@@ -20,6 +20,10 @@ public class RecordService implements Irecord {
     @Autowired
     private MedicalSpecialtyRepository medicalSpecialtyRepository;
 
+
+    /**
+     * Patient methods
+     */
     @Override
     @Transactional(readOnly = true)
     public List<Patient> getPatientList() {
@@ -27,7 +31,7 @@ public class RecordService implements Irecord {
     }
     @Transactional(readOnly = true)
     @Override
-    public List<Patient> searchPatient(String dataToSearch) {
+    public List<Patient> searchPatientByID(Integer idPatienttosearch) {
         return null;
     }
 

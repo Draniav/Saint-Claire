@@ -11,7 +11,7 @@ public interface Irecord {
      * CRUD Patient
      * */
     List<Patient> getPatientList();
-    List<Patient> searchPatient(String dataToSearch);
+    List<Patient> searchPatientByID(Integer id);
     Patient createPatient(Patient patient);
     Patient updatePatient(Integer id, Patient patient);
     Patient updatePatientName(Integer id, Patient patient);
