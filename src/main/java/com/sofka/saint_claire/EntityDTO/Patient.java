@@ -1,8 +1,10 @@
 package com.sofka.saint_claire.EntityDTO;
 
 import lombok.Data;
+import org.jetbrains.annotations.Nullable;
 
 import javax.persistence.*;
+import javax.swing.*;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -38,4 +40,28 @@ public class Patient {
     private Set<Appointment> appointments = new LinkedHashSet<>();
 
 
+    /**
+     * constructs
+     */
+
+    public Patient() {
+    }
+
+
+    private @Nullable Integer validateAge(Integer age) {
+        try {
+            if (age > 0) {
+                return age;
+            }
+
+        } catch (Exception exception) {
+            System.err.println("Error wrong age");
+            return null;
+        }
+        return age;
+    }
+
+    public void addAppointment() {
+        this.numberOfAppointment++;
+    }
 }

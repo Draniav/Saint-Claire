@@ -34,5 +34,14 @@ public class Appointment {
     @JoinColumn(name = "Patient_id_Patient", nullable = false)
     private Patient patientIdPatient;
 
+    /**
+     * constructs
+     */
+    public Appointment() {
+    }
 
+    public Appointment(LocalDate dateAppointment, Patient patientIdPatient) {
+        this.dateAppointment = dateAppointment;
+        this.patientIdPatient = patientIdPatient;
+    }
 }

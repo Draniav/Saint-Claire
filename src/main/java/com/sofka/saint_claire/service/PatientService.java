@@ -27,10 +27,15 @@ public class PatientService implements Ipatient {
     @Override
     @Transactional(readOnly = true)
     public Patient createPatient(Patient patient) {
-        return null;
+        patient.setNumberOfAppointment(0);
+        Patient newPatient = patientRepository.save(patient);
+        addNewAppointment(newPatient.getId());
+        return newPatient;
+
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Integer getPatientByID(Integer idSpeciality, Long identification) {
         return patientRepository.validatePatientExist(idSpeciality, identification);
     }
