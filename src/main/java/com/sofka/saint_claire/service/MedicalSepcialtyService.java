@@ -26,23 +26,29 @@ public class MedicalSepcialtyService implements ImedicalSpecialty {
     @Transactional(readOnly = true)
     public MedicalSpecialty getSpecialityByID(Integer id) {
         var specialty = medicalSpecialtyRepository.findById(id);
-        return specialty.isPresent() ? specialty.get():null;
+        return specialty.isPresent() ? specialty.get() : null;
     }
 
     @Override
     @Transactional
     public MedicalSpecialty createSpeciality(MedicalSpecialty speciality) {
-        return null;
+        return medicalSpecialtyRepository.save(speciality);
     }
 
     @Override
     @Transactional
-    public MedicalSpecialty updateSpeciality(Integer idSpeciality, MedicalSpecialty speciality) {
-        return null;
+    public MedicalSpecialty updateSpeciality(Integer idSpeciality, MedicalSpecialty specialty) {
+        specialty.setId(idSpeciality);
+        return medicalSpecialtyRepository.save(specialty);
     }
 
     @Override
     public MedicalSpecialty deleteSpeciality(Integer idSpeciality) {
+        var speciality = medicalSpecialtyRepository.findById(idSpeciality);
+        if (speciality.isPresent()) {
+            medicalSpecialtyRepository.delete(speciality.get());
+            return speciality.get();
+        }
         return null;
     }
 }
