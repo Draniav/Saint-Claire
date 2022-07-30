@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class MedicalSepcialtyService implements ImedicalSpecialty {
+public class MedicalSpecialtyService implements ImedicalSpecialty {
 
     @Autowired
     private MedicalSpecialtyRepository medicalSpecialtyRepository;
@@ -43,6 +43,7 @@ public class MedicalSepcialtyService implements ImedicalSpecialty {
     }
 
     @Override
+    @Transactional
     public MedicalSpecialty deleteSpeciality(Integer idSpeciality) {
         var speciality = medicalSpecialtyRepository.findById(idSpeciality);
         if (speciality.isPresent()) {
