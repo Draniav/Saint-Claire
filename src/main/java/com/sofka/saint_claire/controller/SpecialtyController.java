@@ -8,6 +8,7 @@ import com.sofka.saint_claire.utilities.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -52,5 +53,11 @@ public class SpecialtyController {
     public ResponseEntity<Response> delete(@PathVariable(value = "id") Integer id) {
         response.data = medicalSpecialtyService.deleteSpeciality(id);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
+    }
+
+    @GetMapping(path = "/list/{id}")
+    public ResponseEntity<Response> getSpecialityByID(@PathVariable(value = "id") Integer id) {
+        response.data = medicalSpecialtyService.getSpecialityByID(id);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
