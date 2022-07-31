@@ -72,3 +72,7 @@ VALUES
 (2, 'Anesthesiology', 'Pablo Pinto'),
 (3, 'Genetics', 'Martha Smith'),
 (4, 'Hematology', 'Martin Mcmillan');
+
+INSERT INTO medical_specialty
+VALUES 
+(5,'Orthopedics', 'Pedro Perez')
