@@ -36,6 +36,7 @@ public class MedicalSpecialty {
 
     @OneToMany(mappedBy = "medicalSpecialtyIdMedicalSpecialty")
     @JsonManagedReference
+
     private List<Patient> patients = new ArrayList<>();
 
     /**

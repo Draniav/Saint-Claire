@@ -49,15 +49,17 @@ public class SpecialtyController {
     }
 
 
-    @DeleteMapping(path = "delete/{id}")
-    public ResponseEntity<Response> delete(@PathVariable(value = "id") Integer id) {
-        response.data = medicalSpecialtyService.deleteSpeciality(id);
-        return new ResponseEntity<>(response, HttpStatus.CREATED);
-    }
+
 
     @GetMapping(path = "/list/{id}")
     public ResponseEntity<Response> getSpecialityByID(@PathVariable(value = "id") Integer id) {
         response.data = medicalSpecialtyService.getSpecialityByID(id);
         return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @DeleteMapping(path = "delete/{id}")
+    public ResponseEntity<Response> deleteSpeciality(@PathVariable(value = "id") Integer id) throws IllegalAccessException {
+        response.data = medicalSpecialtyService.deleteSpeciality(id);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 }

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import org.springframework.transaction.annotation.Transactional;
 
+
 import java.util.List;
 
 @Service
@@ -44,12 +45,15 @@ public class MedicalSpecialtyService implements ImedicalSpecialty {
 
     @Override
     @Transactional
-    public MedicalSpecialty deleteSpeciality(Integer idSpeciality) {
-        var speciality = medicalSpecialtyRepository.findById(idSpeciality);
-        if (speciality.isPresent()) {
-            medicalSpecialtyRepository.delete(speciality.get());
-            return speciality.get();
+    public MedicalSpecialty deleteSpeciality(Integer idSpeciality) throws IllegalAccessException {
+        var optionalMedicalSpecialty = medicalSpecialtyRepository.findById(idSpeciality);
+        if (optionalMedicalSpecialty.isPresent()) {
+            var MedicalSpecialty = optionalMedicalSpecialty.get();
+            medicalSpecialtyRepository.delete(optionalMedicalSpecialty.get());
+            return optionalMedicalSpecialty.get();
+
         }
-        return null;
+     throw new IllegalAccessException("error");
     }
+
 }

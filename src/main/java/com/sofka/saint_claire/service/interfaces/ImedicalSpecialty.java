@@ -13,5 +13,5 @@ public interface ImedicalSpecialty {
 
     MedicalSpecialty updateSpeciality(Integer idSpeciality, MedicalSpecialty speciality);
 
-    MedicalSpecialty deleteSpeciality(Integer idSpeciality);
+    MedicalSpecialty deleteSpeciality(Integer idSpeciality) throws IllegalAccessException;
 }
